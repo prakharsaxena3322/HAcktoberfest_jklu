@@ -31,7 +31,40 @@ public class Ques_4
         }
     }
     
-
+    public void solve(int vertex) throws Exception
+    {
+        
+        if (graph[vertex][0] == 1 && pathCount == V)
+            throw new Exception("Solution found");
+        
+        if (pathCount == V)
+            return;
+ 
+        for (int v = 0; v < V; v++)
+        {
+            
+            if (graph[vertex][v] == 1 )
+            {
+                        
+                path[pathCount++] = v;    
+                         
+                graph[vertex][v] = 0;
+                graph[v][vertex] = 0;
+ 
+               
+                if (!isPresent(v))
+                    solve(v);
+ 
+               
+                graph[vertex][v] = 1;
+                graph[v][vertex] = 1;
+                
+                path[--pathCount] = -1;                    
+            }
+        }
+    }    
+    
+	
     public boolean isPresent(int v)
     {
         for (int i = 0; i < pathCount - 1; i++)
