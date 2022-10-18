@@ -121,6 +121,16 @@ class linkedlist{
 		return;
 	}
 	
+	//function to display list
+	public void display() {
+		Node ptr = start;
+		System.out.println("The linkedlist is : ");
+		while(ptr!=null){
+			System.out.print(ptr.GetData() + " ");
+			ptr=ptr.GetLink();
+		}
+	}
+	
 }
 
 public class menu{
