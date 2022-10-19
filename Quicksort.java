@@ -46,8 +46,7 @@ class QuickSort
             sort(arr, pi+1, high); 
         } 
     } 
-  
-  
+
     // Driver program 
     public static void main(String args[]) 
     { 

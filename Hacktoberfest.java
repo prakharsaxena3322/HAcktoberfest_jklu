@@ -13,6 +13,24 @@ public class Hactoberfest{
       else{
         System.out.print("A is Greater than B ");
       }
+      
     }
-  }
+    Scanner sc = Scanner (System.in);
+    int newno = sc.nextInt();
+    int arr[] = new int[newno];
+    
+    for(int i=0; i<=newno; i++){
+      arr[i] = nextInt();
+    }
+    int count =0 ;
+    if( newno >5 ){
+      System.out.print("Array Length is Acceptable.");
+     }
+    else{
+      System.out.print("Array Length Declined.");
+      count++;
+    }
+    
+    
+      }
 }
